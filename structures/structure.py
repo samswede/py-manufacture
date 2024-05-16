@@ -1,14 +1,26 @@
 from structures.arm import Arm
 from structures.conveyor import Conveyor, ConveyorUnderground
-from structures.factory import Factory
-from structures.furnace import Furnace
-from structures.mine import Mine
+#from structures.factory import Factory
+#from structures.furnace import Furnace
+#from structures.mine import Mine
 from structures.splitter import Splitter
+
+# Refactored Units
+
+# Production
+from structures.production.factory import Factory
+from structures.production.furnace import Furnace
+from structures.production.mine import Mine
 
 from constants import consts as c
 from id_mapping import id_map
 from items import item_manager as im
 from ui.recipe_selection import select_recipe
+
+from typing import Tuple
+from images import img as i
+from pytypes import typechecked
+from abc import ABC, abstractmethod
 
 
 class StructureManager:
